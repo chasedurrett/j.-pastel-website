@@ -1,38 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+
+
 .App {
   text-align: center;
-}
+  background-color: #eeebe0;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.particles {
+  z-index: 1;
+  position: absolute;
+  width:100%;
+  height:100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.youtube{
+  position: relative;
+  z-index: 3;
+}
+.header {
+  width: 100%;
+  height: 20vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.nav-links{
+  height: 10vh;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.link{
+  text-decoration: none;
+}
+.header h2 {
+  position: relative;
+  z-index: 3;
+  color: rgba(0, 0, 0, 0.527);
+  font-size: 1rem;
+}
+.header h1 {
+  font-weight: 400;
+  position: relative;
+  z-index: 3;
+  font-size: 3rem;
+  font-family: 'Caveat', cursive;
+  color: rgba(29, 29, 29, 0.644);
+}
+.header h2:hover{
+  cursor: pointer;
+  text-decoration: line-through;
+}
+.header h1:hover{
+  text-decoration: line-through;
+}
+.middle-section{
+  margin-top: 100px;
+  width: 100%;
+  height: 50vh;
 }
 
-.App-link {
-  color: #61dafb;
+.social-links{
+  width: 35%;
+  font-size: .5rem;
+  font-weight: 300;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  transition: 1000ms;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-links a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.781);
+  font-size: 1.2rem;
+  transition: 500ms;
+  z-index: 3;
+}
+.social-links a:hover{
+  text-decoration: line-through;
+}
+.social-media{
+  width: 10%;
+  margin: 0 auto;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.social-media{
+  position: relative;
+  z-index: 3;
+}
+.social-media img:hover{
+  transform: scale(1.2);
 }
