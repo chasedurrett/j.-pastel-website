@@ -1,28 +1,91 @@
 @import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 .App {
   text-align: center;
-  background-color: #eeebe0;
+  background-color: #a9b7bb;
 
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow: hidden;
+  -webkit-animation: glow linear 60s infinite;
+  animation: glow linear 60s infinite;
+}
+@-webkit-keyframes glow {
+  0% {
+    background-color: #a9b7bb;
+  }
+  50% {
+    background-color: rgb(177, 177, 177);
+  }
+  100% {
+    background-color: #a9b7bb;
+  }
+}
+@keyframes glow {
+  0% {
+    background-color: #a9b7bb;
+  }
+  50% {
+    background-color: rgb(255, 194, 81);
+  }
+  100% {
+    background-color: #a9b7bb;
+  }
+}
+.contact-form {
+  position: relative;
+  background-color: rgba(142, 150, 165, 0.363);
+  z-index: 4;
+  width: 60%;
+  height: 50vh;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+}
+.contact-form input,
+textarea,
+.button-container {
+  margin: 10px auto;
+  width: 70%;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.button-container button {
+  padding:5px 8px;
+  border: none;
+  border-radius: 2px;
+  transition: 1000ms;
+  font-family: "Roboto", sans-serif;
+}
+.button-container button:hover{
+  cursor: pointer;
+  background-color: rgba(245, 245, 245, 0.294);
+}
+.text {
+  height: 30%;
 }
 .particles {
   z-index: 1;
   position: absolute;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   overflow: hidden;
 }
-.youtube{
+.youtube {
   position: relative;
   z-index: 3;
 }
@@ -33,46 +96,47 @@
   justify-content: space-around;
   align-items: center;
 }
-.nav-links{
+.nav-links {
   height: 10vh;
   width: 10%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.link{
+.link {
   text-decoration: none;
 }
 .header h2 {
   position: relative;
   z-index: 3;
   color: rgba(0, 0, 0, 0.527);
-  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
 }
 .header h1 {
   font-weight: 400;
   position: relative;
   z-index: 3;
-  font-size: 3rem;
-  font-family: 'Caveat', cursive;
+  font-size: 3.5rem;
+  font-family: "Caveat", cursive;
   color: rgba(29, 29, 29, 0.644);
 }
-.header h2:hover{
+.header h2:hover {
   cursor: pointer;
   text-decoration: line-through;
 }
-.header h1:hover{
+.header h1:hover {
   text-decoration: line-through;
 }
-.middle-section{
+.middle-section {
   margin-top: 100px;
   width: 100%;
   height: 50vh;
 }
 
-.social-links{
+.social-links {
   width: 35%;
-  font-size: .5rem;
+
   font-weight: 300;
   height: 10vh;
   display: flex;
@@ -85,14 +149,15 @@
   position: relative;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.781);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
   transition: 500ms;
   z-index: 3;
 }
-.social-links a:hover{
+.social-links a:hover {
   text-decoration: line-through;
 }
-.social-media{
+.social-media {
   width: 10%;
   margin: 0 auto;
   height: 5vh;
@@ -100,10 +165,44 @@
   justify-content: space-around;
   align-items: center;
 }
-.social-media{
+.social-media {
   position: relative;
   z-index: 3;
 }
-.social-media img:hover{
+.social-media img:hover {
   transform: scale(1.2);
+}
+
+@media(max-width: 1200px){
+  .social-links a, .social-media img{
+    margin: auto 15px;
+  }
+}
+@media(max-width: 500px){
+  .middle-section{
+    display: none;
+
+  }
+  .header h1{
+    font-size: 1.8rem;
+  }
+  .header h2 {
+    font-size: 1.3rem;
+  }
+  .social-links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+  }
+  .social-links a {
+    margin-top: 26px;
+  }
+  .social-media{
+    margin-top: 200px;
+  }
+  .contact-form{
+    width: 90%;
+    height: 60vh;
+    margin-top: 100px;
+  }
 }

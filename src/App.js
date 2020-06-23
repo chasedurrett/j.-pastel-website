@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <div className="important">
         <header className="header">
-          <h1>j. pastel</h1>
+          <Link className="link" to='/'><h1>j. pastel</h1></Link>
           <div className="nav-links">
             {/*<Link to="/about" className="link">
               <h2>about</h2>
@@ -71,10 +71,11 @@ function App() {
         params={{
           particles: {
             number: {
-              value: 190,
+              value: 240,
+              
               density: {
                 enable: true,
-                value_area: 4500,
+                value_area: 2500,
               },
             },
           },
