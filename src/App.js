@@ -9,13 +9,26 @@ function App() {
     <div className="App">
       <div className="important">
         <header className="header">
-          <Link className="link" to='/'><h1>j. pastel</h1></Link>
+          <Link className="link" to="/">
+            <h1>j. pastel</h1>
+          </Link>
           <div className="nav-links">
             {/*<Link to="/about" className="link">
               <h2>about</h2>
             </Link>*/}
             <Link to="/contact" className="link">
-              <h2>contact</h2>
+              {/* <h2>contact</h2> */}
+              <ul
+                style={{
+                  textDecoration: "none",
+                  listStyle: "none",
+                  textAlign: "left",
+                }}
+              >
+                <li style={{ color: "rgba(0, 0, 0, 0.465)" }}>thomas@surkit.co</li>
+                <li style={{ color: "rgba(0, 0, 0, 0.465)" }}>manu@surkit.co</li>
+                <li style={{ color: "rgba(0, 0, 0, 0.465)" }}>j.pastelmusic@gmail.com</li>
+              </ul>
             </Link>
           </div>
         </header>
@@ -72,7 +85,7 @@ function App() {
           particles: {
             number: {
               value: 70,
-              
+
               density: {
                 enable: true,
                 value_area: 2500,
